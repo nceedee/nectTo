@@ -295,6 +295,10 @@ body::-webkit-scrollbar{
 }
 
 
+.mobile-top-icons{
+    display: none;
+}
+
 /* MEDIA QUERY SIDE */
 
 
@@ -307,6 +311,7 @@ body::-webkit-scrollbar{
     .mobile-top-icons{
         background-color: white;
         padding: 6px;
+        display: block;
     }
 
     .logo-and-input img{
