@@ -18,6 +18,29 @@
     box-sizing: border-box;
 }
 
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h4,
+a,
+p,
+span,
+button,
+input,
+::placeholder,
+option{
+    font-size: 16px;
+}
+
 
 .all-content{
     overflow-x: hidden;
@@ -27,7 +50,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: regular;
-
+    background-color: #1a1a1a;
 }
 
 body::-webkit-scrollbar{
@@ -94,7 +117,7 @@ body::-webkit-scrollbar{
 }
 
 .wrapper,hide{
-    animation: hide_toast 22s ease forwards;
+    animation: hide_toast 3s ease forwards;
 
 }
 
@@ -183,6 +206,151 @@ body::-webkit-scrollbar{
 }
 
 
+
+
+
+
+.home-logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 45px;
+    height: 45px;
+}
+
+.search-besideLogo input{
+    background-color: #282828;
+    outline: none;
+    border: none;
+    padding: 8px;
+    color: white;
+    border-radius: 12px;
+
+}
+
+
+.home-page-icons-display span{
+    color: #c39746;
+}
+
+.home-page-icons-display span:hover{
+    color: blueviolet;
+}
+
+
+
+.home-page-icons-display{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.log-in-Out{
+    width: 30%;
+    
+}
+
+.logging{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+}
+
+.log-in-Out img{
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.log-in-Out select{
+    background-color: #282828;
+    padding: 12px;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.log-in-Out option{
+    color: black;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.header-top-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+
+/* MEDIA QUERY SIDE */
+
+
+@media (max-width: 991px){
+
+    .header-top-icons{
+        display: none;
+    }
+
+    .mobile-top-icons{
+        background-color: white;
+        padding: 6px;
+    }
+
+    .logo-and-input img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-and-input input{
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: #282828;
+        color: white;
+        padding: 6px;
+        border-radius: 10px;
+    }
+
+    .logo-and-input{
+        display: flex;
+        align-items: center;
+    }
+
+    .icon-bottom-mobile img{
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+    }
+
+    .icon-bottom-mobile{
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    
+    
+}
+
+
 @media (max-width: 768px){
     .wrapper .toast{
         width: 350px;
@@ -262,3 +430,4 @@ body::-webkit-scrollbar{
         width: 40px;
     }
 }
+
