@@ -709,8 +709,100 @@ img{
     display: none;
 }
 
+.story-img-upload{
+    background-color: #383636;
+    color: white;
+    background-size: cover;
+    min-width: 120px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.story-img-upload span{
+    background-color: blueviolet;
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+
+.story-container{
+    background: #383636;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    max-width: 450px;
+    height: 80vh;
+    margin: auto;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 50px;
+}
+
+
+#prevText{
+    position: absolute;
+    left: 15%;
+    bottom: 30%;
+    /* top: 10px; */
+    transform: translateX(-50px);
+    width: 90%;
+    font-size: 32px;
+    font-family: bold;
+    text-shadow: 2px 2px 20px #000;
+    text-align: center;
+    line-break: anywhere;
+}
+
+
+
+#textBox{
+    position: absolute;
+    left: 0;
+    /* bottom: 0; */
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    padding: 10px;
+    resize: none;
+    top: 80%;
+}
+
+#textBox::-webkit-scrollbar{
+    display: none;
+}
+
+.upload-icon{
+    position: absolute;
+    width: 60px;
+    left: 7%;
+    transform: translateX(-20px) translateY(5px);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.plane{
+    position: absolute;
+    right: 0;
+    background-color: white;
+    padding: 12px;
+    font-size: 40px;
+    border-radius: 12px;
+    transform: translateY(5px);
+}
 
 @media (max-width: 991px){
+
+    .story-container{
+        max-width: 100%;
+    }
+
+    .story-img-upload{
+        margin-left: 20px;
+    }
 
     .profile-uploaded-photos-videos{
         display: flex;

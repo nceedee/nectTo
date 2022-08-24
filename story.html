@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload-story</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/fonts/fontawesome-free-6.0.0-web/css/all.css">
+</head>
+<body>
+    <!-- <div class="all-content"> -->
+        <div class="story-container" id="imageBox">
+            <div id="prevText"></div>
+            <textarea name="" id="textBox" placeholder="Add caption:" ></textarea>
+            <input type="file" name="image" id="file" style="display: none;" onchange="loadFile(event)">
+            <label for="file"><img src="./asset/image/upload2.png" alt="" class="upload-icon"></label>
+            <a href="./index.html"><span class="fa-solid far fa-paper-plane plane" ></span></a>
+        </div>
+    <!-- </div> -->
+
+    <script>
+        let textBox = document.getElementById("textBox");
+        let imageBox = document.getElementById("imageBox");
+
+
+
+
+        textBox.onkeyup = textBox.onkeypress = function(){
+           document.getElementById("prevText").innerHTML = this.value;
+        }
+
+        let loadFile = function(event){
+            imageBox.style.backgroundImage= "url(" +URL.createObjectURL(event.target.files[0]) + ")"
+        }
+
+
+        let TextBox = document.getElementById("textBox");
+
+        let limit = 60;
+
+        TextBox.addEventListener("input" , function(){
+            let textLength = TextBox.value.length;
+             if(textLength > limit){
+                TextBox.style.color ="red"
+             }
+             else{
+                TextBox.style.color ="white"
+             }
+        });
+
+
+
+        
+    </script>
+</body>
+</html>
