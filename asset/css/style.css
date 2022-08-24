@@ -18,6 +18,11 @@
     box-sizing: border-box;
 }
 
+*::selection{
+    background-color: blueviolet;
+    color: white;
+}
+
 h1{
     font-size: 50px;
 }
@@ -208,7 +213,12 @@ body::-webkit-scrollbar{
 }
 
 
-
+.header-top-icons{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #0c0101;
+}
 
 
 
@@ -264,9 +274,10 @@ body::-webkit-scrollbar{
 }
 
 .log-in-Out img{
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
+    width: 40px;
+    height: 35px;
+    transform: translateY(2px);
+    border-radius: 4px 0px 0px 4px;
 }
 
 .log-in-Out select{
@@ -327,7 +338,8 @@ body::-webkit-scrollbar{
 
 .followers-side-view{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
     align-items: center;
     transform: translateY(-80px);
 }
@@ -400,6 +412,10 @@ body::-webkit-scrollbar{
     font-family: bold;
 }
 
+a{
+    text-decoration: none;
+}
+
 
 .skills input{
     background-color: #383636;
@@ -442,6 +458,7 @@ body::-webkit-scrollbar{
 .upload-username-online{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .upload-username-online span{
@@ -568,18 +585,178 @@ body::-webkit-scrollbar{
 
 
 
+.profile-general{
+    width: 23%;
+    overflow-y: scroll;
+    position: fixed;
+    top: 10px;
+    bottom: 0px;
+}
+
+.flexing-all{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-general::-webkit-scrollbar{
+    display: none;
+}
+
+.story-img img{
+    width: 120px;
+    height: 150px;
+    border: 2px solid #c39746;
+    border-radius: 12px;
+    margin-left: 20px;
+}
+
+.story-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+
+.story-img p{
+    color: #878787;
+    margin-left: 20px;
+}
 
 
+.story-mode{
+    display: flex;
+    position: sticky;
+    width: 100%;
+    overflow-x: scroll;
+    left: 20px;
+    right: 0;
+}
 
+.story-mode::-webkit-scrollbar{
+    display: none;
+}
 
+.bg{
+    background-color: red;
+    height: 400vh;
+    width: 22%;
+    position: fixed;    
+    right: 0;
+    overflow-y: scroll;
+    top: 10px;
+    bottom: 0px;
+}
 
+.bg::-webkit-scrollbar{
+    display: none;
+}
+
+.story-main-timeline{
+    width: 50%;
+    position: sticky;
+    overflow-y: scroll;
+    top: 0px;
+    bottom: 0px;
+    left: 25%;
+    transform: translateY(80px);
+}
+
+.story-main-timeline::-webkit-scrollbar{
+    display: none;
+}
+
+.upload-on-profile-side-timeline{
+    margin-bottom: 20px;
+}
+
+.mobile-version{
+    margin-bottom: 90px;
+}
+
+.profile-uploaded-photos-videos{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+   
+}
+
+.profile-uploaded-photos-videos .upload-on-profile-side{
+    width: 30%;
+    margin-left: 30px;
+    margin-bottom: 50px;
+    transition: all 2s ease;
+}
+
+.profile-uploaded-photos-videos .upload-on-profile-side:hover{
+    transform: scale(1.05);
+}
+
+.uploaded-image img{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+img{
+    cursor: pointer;
+}
 
 /* MEDIA QUERY SIDE */
 
-
+.mobile-version{
+    display: none;
+}
 
 
 @media (max-width: 991px){
+
+    .profile-uploaded-photos-videos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-uploaded-photos-videos .upload-on-profile-side{
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .profile-uploaded-photos-videos .upload-on-profile-side:hover{
+        transform: none;
+        margin-bottom: 50px;
+    }
+
+    .flexing-all{
+        display: none;
+        flex-direction: column;
+
+    }
+
+    .mobile-version{
+        display: block;
+    }
+
+
+
+    .story-main-timeline{
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+
+    .profile-general{
+        width: 100%;
+        position: relative;
+    }
+
+    .bg{
+        width: 100%;
+        position: relative;
+        overflow-y: hidden;
+        top: 90px;
+    }
 
     .header-top-icons{
         display: none;
@@ -587,7 +764,6 @@ body::-webkit-scrollbar{
 
     .mobile-top-icons{
         background-color: white;
-        padding: 6px;
         display: block;
     }
 
@@ -604,11 +780,16 @@ body::-webkit-scrollbar{
         color: white;
         padding: 6px;
         border-radius: 10px;
+        margin-right: 20px;
     }
 
     .logo-and-input{
         display: flex;
         align-items: center;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        z-index: 100;
     }
 
     .icon-bottom-mobile img{
