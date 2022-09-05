@@ -217,7 +217,7 @@ body::-webkit-scrollbar{
     position: fixed;
     width: 100%;
     z-index: 100;
-    background-color: #0c0101;
+    background-color: #1a1a1a;
 }
 
 
@@ -542,6 +542,7 @@ a{
     justify-content: space-between;
     padding-bottom: 20px;
     border-bottom: 1px solid #383636;
+    flex-wrap: nowrap;
 }
 
 .image-of-me-commenting img{
@@ -794,6 +795,18 @@ img{
     transform: translateY(5px);
 }
 
+
+.like-group{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1200px) {
+    .followers-side-viewers{
+        margin-top: 80px;
+    }
+}
+
 @media (max-width: 991px){
 
     .story-container{
@@ -903,6 +916,8 @@ img{
     }
 
     
+
+    
     
 }
 
@@ -957,6 +972,19 @@ img{
         font-size: 15px;
         height: 40px;
         width: 40px;
+    }
+}
+
+.followers-side-views{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 375px) {
+    .profile-side .followers-side-view{
+        display: flex;
+        justify-content: space-between;
     }
 }
 
